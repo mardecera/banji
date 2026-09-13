@@ -12,7 +12,8 @@
     "./client": {
       "types": "./dist/client.d.ts",
       "import": "./dist/client.js"
-    }
+    },
+    "./globals.css": "./src/globals.css"
   },
   "scripts": {
     "build": "tsup",
@@ -28,7 +29,8 @@
   "peerDependencies": {
     "next-intl": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@banji/typescript-config": "workspace:*",
@@ -43,6 +45,7 @@
     "next-intl": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "tailwindcss": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
