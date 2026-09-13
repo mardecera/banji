@@ -1,0 +1,10 @@
+{
+  "Home": {
+    "title": "Banji Web",
+    "subtitle": "Plataforma web moderna con arquitectura de features, i18n por path y monorepo Turborepo.",
+    "cta": "Explorar demo",
+    "toggleLabel": "Estado demo",
+    "statusOn": "Activo",
+    "statusOff": "Inactivo"
+  }
+}

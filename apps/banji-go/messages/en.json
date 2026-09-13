@@ -1,0 +1,10 @@
+{
+  "Home": {
+    "title": "Banji Go",
+    "subtitle": "Lightweight mobility app to test shared packages and path-based i18n.",
+    "cta": "Start trip",
+    "toggleLabel": "Status",
+    "statusOn": "Running",
+    "statusOff": "Stopped"
+  }
+}

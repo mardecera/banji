@@ -1,0 +1,42 @@
+{
+  "name": "@banji/assets",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "exports": {
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.js"
+    },
+    "./illustrations": {
+      "types": "./dist/illustrations/index.d.ts",
+      "import": "./dist/illustrations/index.js"
+    },
+    "./images/*": "./src/images/*",
+    "./fonts.css": "./src/fonts/fonts.css",
+    "./fonts/*": "./src/fonts/*"
+  },
+  "scripts": {
+    "build": "rollup -c && tsc -p tsconfig.declarations.json",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "clean": "rm -rf dist coverage"
+  },
+  "peerDependencies": {
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@banji/typescript-config": "workspace:*",
+    "@rollup/plugin-node-resolve": "catalog:",
+    "@rollup/plugin-typescript": "catalog:",
+    "@svgr/rollup": "catalog:",
+    "@types/react": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "react": "catalog:",
+    "rollup": "catalog:",
+    "tslib": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

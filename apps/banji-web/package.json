@@ -1,0 +1,41 @@
+{
+  "name": "banji-web",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "clean": "rm -rf .next coverage"
+  },
+  "dependencies": {
+    "@banji/assets": "workspace:*",
+    "@banji/contexts": "workspace:*",
+    "@banji/hooks": "workspace:*",
+    "@banji/i18n": "workspace:*",
+    "@banji/ui": "workspace:*",
+    "@banji/utils": "workspace:*",
+    "next": "catalog:",
+    "next-intl": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@banji/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "jsdom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

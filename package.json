@@ -1,0 +1,33 @@
+{
+  "name": "banji",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.12.4",
+  "scripts": {
+    "dev": "bash tools/scripts/dev.sh",
+    "build": "turbo run build",
+    "compile": "turbo run build --filter=./packages/*",
+    "package:watch": "turbo watch build --filter=./packages/*",
+    "start": "turbo run start",
+    "clean": "bash tools/scripts/clean.sh",
+    "check-types": "turbo run check-types",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "turbo run test",
+    "verify": "pnpm lint && pnpm check-types && pnpm test",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "turbo": "catalog:"
+  },
+  "lint-staged": {
+    "*": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Home": {
+    "title": "Banji Crypt",
+    "subtitle": "Demo cripto con arquitectura de features y monorepo compartido.",
+    "cta": "Ver mercado",
+    "toggleLabel": "Estado",
+    "statusOn": "Conectado",
+    "statusOff": "Desconectado"
+  }
+}

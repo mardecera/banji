@@ -1,0 +1,36 @@
+@import "@banji/assets/fonts.css";
+@import "tailwindcss";
+@source "../../../../packages/ui/src/**/*.{ts,tsx}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f7faf7;
+  --foreground: #111827;
+  --accent: #4d7c0f;
+  --accent-foreground: #f7fee7;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --background: #0b120c;
+  --foreground: #e5e7eb;
+  --accent: #84cc16;
+  --accent-foreground: #1a2e05;
+  --border: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --font-sans: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

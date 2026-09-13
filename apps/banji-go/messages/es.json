@@ -1,0 +1,10 @@
+{
+  "Home": {
+    "title": "Banji Go",
+    "subtitle": "App de movilidad ligera para probar paquetes compartidos e i18n por path.",
+    "cta": "Iniciar viaje",
+    "toggleLabel": "Estado",
+    "statusOn": "En marcha",
+    "statusOff": "Detenido"
+  }
+}
