@@ -1,60 +1,21 @@
-# Banji Monorepo
+# Banji
 
-Turborepo + pnpm monorepo with four Next.js apps and shared packages.
+Banji es un conjunto de herramientas web: cada una hace una cosa, vive en su propio dominio y está lista para usarse ahora.
 
-## Requirements
+Empieza en **[banji.dev](https://banji.dev)** — ahí se reúnen y se presentan todas.
 
-- Node.js 24+
-- pnpm 10+
-- Python 3 (optional, for icon barrel generation)
-- GitHub CLI (`gh`, optional, for `/release`)
+## Go — acorta y comparte
 
-## Apps
+[go.banji.dev](https://go.banji.dev) convierte un enlace largo en uno corto y fácil de pasar. Sirve para chats, redes, docs o cualquier sitio donde una URL enorme estorba.
 
-| App | Port | Command |
-|-----|------|---------|
-| banji-web | 3000 | `pnpm --filter banji-web dev` |
-| banji-go | 3001 | `pnpm --filter banji-go dev` |
-| banji-crypt | 3002 | `pnpm --filter banji-crypt dev` |
-| banji-docs | 3003 | `pnpm --filter banji-docs dev` (docs at `/`, prod: `docs.dominio.com`) |
+## Crypt — cifra en el navegador
 
-With a single app, run `pnpm package:watch` in another terminal so shared packages rebuild on change.
+[crypt.banji.dev](https://crypt.banji.dev) es una herramienta de cifrado que corre en tu navegador. Encripta texto o datos sin mandarlos a un servidor: tú controlas qué se cifra y quién puede leerlo.
 
-## Packages
+## Docs
 
-- `@banji/ui` — Button
-- `@banji/ui/client` — LocaleSwitcher, ThemeToggle
-- `@banji/contexts` — ThemeProvider
-- `@banji/i18n` — shared routing, navigation, canonical helpers
-- `@banji/utils` — utilities (`capitalize`)
-- `@banji/hooks` — React hooks (`useToggle`)
-- `@banji/assets` — icons, illustrations, images, fonts
+Guías y referencia del proyecto en [docs.banji.dev](https://docs.banji.dev).
 
-## Scripts
+---
 
-```bash
-pnpm install
-pnpm dev            # apps in TUI; packages rebuild in the background
-pnpm package:watch  # rebuild packages on change (use with a single app)
-pnpm compile        # rebuild shared packages once
-pnpm build          # build all
-pnpm verify         # lint + types + tests
-pnpm clean          # remove artifacts
-```
-
-## i18n
-
-Locales: `es` (default), `en`. Language lives in the URL path only (`/es`, `/en`). No locale cookie.
-
-## Release
-
-Use the Cursor command `/release` to analyze commits, propose semver bump, and create a GitHub Release via `tools/scripts/release.sh`.
-
-## Deploy (Vercel)
-
-Create one Vercel project per app with:
-
-- Root Directory: `apps/banji-web` (or go/crypt/docs)
-- Install: `pnpm install`
-- Build: `cd ../.. && pnpm turbo build --filter=banji-web` (or `banji-docs`)
-- **banji-docs:** custom domain `docs.dominio.com`; set `NEXT_PUBLIC_DOCS_URL=https://docs.dominio.com`
+Código abierto bajo [GPL-3.0-or-later](LICENSE).
