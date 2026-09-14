@@ -1,6 +1,6 @@
 # Banji Monorepo
 
-Turborepo + pnpm monorepo with three Next.js apps and shared packages.
+Turborepo + pnpm monorepo with four Next.js apps and shared packages.
 
 ## Requirements
 
@@ -16,6 +16,7 @@ Turborepo + pnpm monorepo with three Next.js apps and shared packages.
 | banji-web | 3000 | `pnpm --filter banji-web dev` |
 | banji-go | 3001 | `pnpm --filter banji-go dev` |
 | banji-crypt | 3002 | `pnpm --filter banji-crypt dev` |
+| banji-docs | 3003 | `pnpm --filter banji-docs dev` (docs at `/`, prod: `docs.dominio.com`) |
 
 With a single app, run `pnpm package:watch` in another terminal so shared packages rebuild on change.
 
@@ -53,6 +54,7 @@ Use the Cursor command `/release` to analyze commits, propose semver bump, and c
 
 Create one Vercel project per app with:
 
-- Root Directory: `apps/banji-web` (or go/crypt)
+- Root Directory: `apps/banji-web` (or go/crypt/docs)
 - Install: `pnpm install`
-- Build: `cd ../.. && pnpm turbo build --filter=banji-web`
+- Build: `cd ../.. && pnpm turbo build --filter=banji-web` (or `banji-docs`)
+- **banji-docs:** custom domain `docs.dominio.com`; set `NEXT_PUBLIC_DOCS_URL=https://docs.dominio.com`

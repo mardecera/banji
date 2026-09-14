@@ -1,0 +1,46 @@
+---
+title: Apps
+description: Las tres aplicaciones Next.js del monorepo Banji.
+---
+
+Cada app comparte arquitectura de **features**, i18n por path y paquetes `@banji/*`.
+
+## banji-web — `:3000`
+
+```bash
+pnpm --filter banji-web dev
+```
+
+Home con demo de toggle, header (`LocaleSwitcher`, `ThemeToggle`) y copy orientado a plataforma web.
+
+## banji-go — `:3001`
+
+```bash
+pnpm --filter banji-go dev
+```
+
+Misma estructura que web; branding y textos de movilidad.
+
+## banji-crypt — `:3002`
+
+```bash
+pnpm --filter banji-crypt dev
+```
+
+Demo cripto con el mismo layout compartido.
+
+## Desarrollo local
+
+Con una sola app, en otra terminal:
+
+```bash
+pnpm package:watch
+```
+
+Recompila paquetes al cambiar código en `packages/`.
+
+## Deploy (Vercel)
+
+- **Root Directory:** `apps/banji-web` (o go/crypt/docs)
+- **Install:** `pnpm install`
+- **Build:** `cd ../.. && pnpm turbo build --filter=banji-docs`

@@ -1,0 +1,35 @@
+---
+title: Introducción
+description: Documentación del monorepo Banji — apps, paquetes compartidos y convenciones.
+---
+
+Banji es un monorepo **Turborepo + pnpm** con tres apps Next.js y paquetes compartidos en `packages/`.
+
+## Apps
+
+| App | Puerto | Propósito |
+| --- | --- | --- |
+| banji-web | 3000 | Plataforma web |
+| banji-go | 3001 | Demo movilidad |
+| banji-crypt | 3002 | Demo cripto |
+
+## Paquetes
+
+- `@banji/ui` — componentes UI (`Button`, `LocaleSwitcher`, `ThemeToggle`)
+- `@banji/contexts` — `ThemeProvider`
+- `@banji/i18n` — routing, navegación y helpers de locale
+- `@banji/hooks` — hooks React (`useToggle`)
+- `@banji/utils` — utilidades (`capitalize`)
+- `@banji/assets` — iconos, ilustraciones, fuentes e imágenes
+
+## Convenciones
+
+- **Node.js 24+** y **pnpm 10+**
+- i18n por path (`/es`, `/en`) sin cookie de locale
+- Estilos globales compartidos en `@banji/ui/globals.css`
+- `minimumReleaseAge` de 72 h en dependencias del workspace
+
+<Cards>
+  <Card title="Paquetes" href="/packages/ui" />
+  <Card title="Apps" href="/apps" />
+</Cards>

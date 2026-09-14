@@ -1,0 +1,4 @@
+{
+  "title": "Paquetes",
+  "pages": ["ui", "hooks", "utils", "i18n", "contexts", "assets"]
+}

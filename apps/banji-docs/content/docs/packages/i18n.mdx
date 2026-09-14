@@ -1,0 +1,38 @@
+---
+title: "@banji/i18n"
+description: Routing, navegación y helpers de internacionalización.
+---
+
+Locales: **`es`** (default) y **`en`**. El idioma vive solo en la URL (`/es`, `/en`).
+
+## Exports principales
+
+```ts
+import {
+  alternatesFor,
+  isLocale,
+  locales,
+  routing,
+  Link,
+  redirect,
+  usePathname,
+  useRouter,
+  getPathname,
+} from "@banji/i18n";
+```
+
+## Middleware / proxy
+
+Cada app expone `src/proxy.ts`:
+
+```ts
+import { createIntlMiddleware } from "@banji/i18n/middleware";
+
+export default createIntlMiddleware();
+```
+
+Next.js 16 usa `proxy.ts` en lugar de `middleware.ts` para el matcher de locale.
+
+## alternatesFor
+
+Genera `canonical` y `languages` para metadata SEO en layouts `[locale]`.

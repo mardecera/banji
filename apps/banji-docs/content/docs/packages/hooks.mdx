@@ -1,0 +1,22 @@
+---
+title: "@banji/hooks"
+description: Hooks React compartidos del monorepo.
+---
+
+## useToggle
+
+Estado booleano con función `toggle`.
+
+```ts
+import { useToggle } from "@banji/hooks";
+
+const { value, toggle, setValue } = useToggle(false);
+```
+
+| Miembro | Tipo | Descripción |
+| --- | --- | --- |
+| `value` | `boolean` | Estado actual |
+| `toggle` | `() => void` | Invierte el valor |
+| `setValue` | `(v: boolean) => void` | Asignación directa |
+
+Usado en las vistas Home de cada app para el demo de estado on/off.

@@ -2,6 +2,7 @@ node_modules
 .turbo
 dist
 .next
+.source
 next-env.d.ts
 coverage
 *.tsbuildinfo

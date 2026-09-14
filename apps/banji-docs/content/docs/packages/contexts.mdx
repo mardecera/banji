@@ -1,0 +1,20 @@
+---
+title: "@banji/contexts"
+description: Contextos React compartidos — ThemeProvider.
+---
+
+## ThemeProvider
+
+Envuelve la app con `next-themes` (atributo `class`, tema oscuro por defecto).
+
+```tsx
+import { ThemeProvider } from "@banji/contexts";
+
+<html suppressHydrationWarning>
+  <body>
+    <ThemeProvider>{children}</ThemeProvider>
+  </body>
+</html>
+```
+
+Requerido para `ThemeToggle` de `@banji/ui/client`.

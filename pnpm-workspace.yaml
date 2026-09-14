@@ -31,6 +31,13 @@ catalog:
   '@rollup/plugin-typescript': ^12.1.4
   '@svgr/rollup': ^8.1.0
   tslib: ^2.8.1
+  fumadocs-core: 16.15.9
+  fumadocs-mdx: 15.4.0
+  '@fumadocs/base-ui': 16.15.9
+  '@types/mdx': ^2.0.14
+  lucide-react: ^1.43.0
+  cn: ^0.2.6
+  postcss: ^8.5.28
 
 minimumReleaseAge: 4320
 

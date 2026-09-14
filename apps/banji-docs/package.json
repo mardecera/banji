@@ -1,0 +1,40 @@
+{
+  "name": "banji-docs",
+  "version": "0.0.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "next dev --port 3003",
+    "build": "next build",
+    "start": "next start --port 3003",
+    "check-types": "next typegen && tsc --noEmit",
+    "clean": "rm -rf .next .source"
+  },
+  "dependencies": {
+    "@banji/assets": "workspace:*",
+    "@banji/contexts": "workspace:*",
+    "@banji/hooks": "workspace:*",
+    "@banji/i18n": "workspace:*",
+    "@banji/ui": "workspace:*",
+    "@banji/utils": "workspace:*",
+    "cn": "catalog:",
+    "fumadocs-core": "catalog:",
+    "fumadocs-mdx": "catalog:",
+    "fumadocs-ui": "npm:@fumadocs/base-ui@16.15.9",
+    "lucide-react": "catalog:",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@banji/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/mdx": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "postcss": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

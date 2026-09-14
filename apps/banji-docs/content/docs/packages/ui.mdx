@@ -1,0 +1,56 @@
+---
+title: "@banji/ui"
+description: Componentes UI compartidos — Button, LocaleSwitcher y ThemeToggle.
+---
+
+import { Button } from "@banji/ui";
+import { ThemeToggle } from "@banji/ui/client";
+
+Importaciones:
+
+```ts
+import { Button } from "@banji/ui";
+import { LocaleSwitcher, ThemeToggle } from "@banji/ui/client";
+```
+
+Los estilos usan tokens de `@banji/ui/globals.css` (`accent`, `foreground`, `border`).
+
+## Button
+
+Variantes: `primary` (default), `secondary`, `ghost`.
+
+```tsx
+<Button variant="primary">Acción</Button>
+```
+
+<Preview>
+  <div className="flex flex-wrap gap-3">
+    <Button>Primario</Button>
+    <Button variant="secondary">Secundario</Button>
+    <Button variant="ghost">Ghost</Button>
+  </div>
+</Preview>
+
+## LocaleSwitcher
+
+Selector de idioma basado en `@banji/i18n`. Requiere `next-intl` en la app host.
+
+```tsx
+import { LocaleSwitcher } from "@banji/ui/client";
+
+<LocaleSwitcher />
+```
+
+## ThemeToggle
+
+Alterna tema claro/oscuro vía `next-themes` y `@banji/contexts`.
+
+```tsx
+import { ThemeToggle } from "@banji/ui/client";
+
+<ThemeToggle />
+```
+
+<Preview>
+  <ThemeToggle />
+</Preview>

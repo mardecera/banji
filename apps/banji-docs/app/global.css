@@ -1,0 +1,15 @@
+@import "@banji/ui/globals.css";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+@source "../app/**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../content/**/*.{md,mdx}";
+
+:root {
+  /* Evita la columna flexible que deja hueco a la izquierda del sidebar en pantallas anchas. */
+  --fd-layout-width: 100vw;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
